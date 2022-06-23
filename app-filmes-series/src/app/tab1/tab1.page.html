@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Filmes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Filmes</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list ngIf="listarFilmes">
+    <ion-iten ngFor="let filme of listarFilmes">
+      <ion-iten>
+        <ion-thumbnail slot="start">
+          <img ngIf="filme.cartaz" src="{{filme.cartaz}}">
+        </ion-thumbnail>
+        <ion-label>Item Thumbnail</ion-label>
+      </ion-iten>
+    </ion-iten>
+  </ion-list>
+  <app-explore-container name="Tab 1 page"></app-explore-container>
+</ion-content>
